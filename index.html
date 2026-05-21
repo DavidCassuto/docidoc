@@ -694,6 +694,6 @@ function installApp() {
   deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
 }
 </script><div id="installBtn" style="display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:9999;background:#fff;border:none;border-radius:50px;padding:14px 30px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:800;color:#111;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,0.5);align-items:center;gap:10px;" onclick="installApp()">🐕 &nbsp;Installeer Docidoc</div>
-<script>var _dp=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();_dp=e;var b=document.getElementById('installBtn');if(b)b.style.display='flex';});window.addEventListener('appinstalled',function(){var b=document.getElementById('installBtn');if(b)b.style.display='none';_dp=null;});function installApp(){if(!_dp)return;_dp.prompt();_dp.userChoice.then(function(){_dp=null;});}if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){});}</script>
+<script>var _dp=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();_dp=e;var b=document.getElementById('installBtn');if(b)b.style.display='flex';});window.addEventListener('appinstalled',function(){var b=document.getElementById('installBtn');if(b)b.style.display='none';_dp=null;});function installApp(){if(!_dp)return;_dp.prompt();_dp.userChoice.then(function(){_dp=null;});}if('serviceWorker' in navigator){navigator.serviceWorker.register('/docidoc/sw.js', {scope: '/docidoc/'}).catch(function(){});}</script>
 </body>
 </html>
